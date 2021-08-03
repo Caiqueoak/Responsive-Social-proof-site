@@ -1,0 +1,194 @@
+@import "variables";
+
+body {
+  position: relative;
+}
+
+.main-container {
+  @include centered-flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 75px 18px;
+}
+
+.heading-container {
+  .heading-title {
+    color: $Very-Dark-Magenta;
+    font-size: 2.3rem;
+  }
+  .heading-description {
+    color: $Dark-Grayish-Magenta;
+    padding: 20px 0 30px;
+    font-weight: 500;
+  }
+}
+
+.rates-container {
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 100%;
+  max-width: 375px;
+
+  .rates-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    width: 100%;
+    height: 70px;
+    background-color: $Light-Grayish-Magenta;
+
+    .review {
+      color: $Very-Dark-Magenta;
+      font-weight: 700;
+    }
+  }
+}
+
+.buyers-reviews {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  row-gap: 15px;
+
+  .buyers-container {
+    background-color: $Very-Dark-Magenta;
+    color: white;
+    border-radius: 7px;
+    padding: 35px 30px 30px;
+    text-align: left;
+    height: fit-content;
+    max-width: 380px;
+
+    .profile {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+      padding-bottom: 25px;
+
+      .profile-picture {
+        border-radius: 100%;
+        height: 35px;
+      }
+      .name {
+        font-size: 0.8rem;
+        font-weight: 700;
+
+        .verified-label {
+          color: $Soft-Pink;
+          font-size: inherit;
+          padding-top: 5px;
+          font-weight: 400;
+        }
+      }
+    }
+    .review-text {
+      line-height: 1.4rem;
+      font-size: 0.92rem;
+    }
+  }
+}
+footer {
+  position: absolute;
+  text-align: center;
+  font-weight: 700;
+  bottom: 10px;
+  width: 100%;
+}
+
+@media screen and (min-width: 750px) and (max-width: 1000px) {
+  .buyers-reviews {
+    flex-direction: row;
+    column-gap: 20px;
+  }
+  .heading-description {
+    max-width: 750px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  * {
+    padding: 0 !important;
+    border: 0 !important;
+  }
+
+  .main-container {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 120vh;
+    padding: 50px 80px !important;
+    align-items: flex-start;
+    row-gap: 50px;
+  }
+
+  .heading-container {
+    display: flex;
+    flex-direction: column;
+    padding-right: 70px !important;
+    row-gap: 10px;
+    border: 2px solid black;
+
+    .heading-title {
+      font-size: 2.5rem;
+      line-height: 2.8rem;
+    }
+    .heading-description {
+      font-size: 0.85rem;
+      line-height: 1.3rem;
+    }
+  }
+  .rates-container {
+    margin-top: 13px;
+    border: 2px solid black;
+    justify-self: right;
+
+    .rates-box {
+      flex-direction: row;
+      align-items: center;
+      height: 45px;
+
+      .review {
+        font-size: 0.75rem;
+        padding-right: 40px !important;
+      }
+    }
+    .reviews-rate {
+      position: relative;
+      right: 80px;
+    }
+    .reportGuru-rate {
+      position: relative;
+      right: 40px;
+    }
+  }
+
+  .buyers-reviews {
+    grid-column: 1/3;
+    flex-direction: row;
+    column-gap: 20px;
+    margin-top: -8px;
+
+    .buyers-container {
+      height: 180px;
+      padding: 22px 15px !important;
+
+      .review-text {
+        font-size: 0.75rem;
+        padding-top: 18px !important;
+      }
+      .verified-label {
+          padding-top: 5px !important;
+      }
+    }
+    .colton-container {
+        margin-top: -20px;
+    }
+    .irene-container {
+        margin-top: -10px;
+    }
+  }
+}
