@@ -42,7 +42,6 @@ body {
 .rates-container .rates-box {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   border-radius: 5px;
   width: 100%;
   height: 70px;
@@ -104,39 +103,47 @@ footer {
   position: absolute;
   text-align: center;
   font-weight: 700;
-  bottom: 10px;
+  bottom: 5px;
   width: 100%;
+  font-size: 0.7rem;
 }
 
-@media screen and (min-width: 750px) and (max-width: 1000px) {
+footer a {
+  font-size: 0.7rem;
+}
+
+@media screen and (min-width: 750px) {
+  .heading-description {
+    max-width: 750px;
+  }
   .buyers-reviews {
     flex-direction: row;
     column-gap: 20px;
   }
-  .heading-description {
-    max-width: 750px;
-  }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 1350px) {
   * {
     padding: 0 !important;
     border: 0 !important;
   }
+  body {
+    height: 105vh;
+  }
   .main-container {
     text-align: left;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    grid-template-columns: 1fr 1.3fr;
     grid-template-rows: 1fr 1fr;
     height: 100vh;
-    padding: 100px 180px 0px !important;
-    align-items: flex-start;
-    row-gap: 50px;
+    padding: 90px 180px 0px !important;
+    row-gap: 80px;
   }
   .heading-container {
     display: flex;
     flex-direction: column;
-    padding-right: 50px !important;
+    padding-right: 60px !important;
     row-gap: 15px;
     border: 2px solid black;
   }
@@ -145,39 +152,44 @@ footer {
     line-height: 2.8rem;
   }
   .heading-container .heading-description {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.6rem;
   }
   .rates-container {
-    margin-top: 10px;
-    justify-self: right;
+    position: relative;
+    margin-top: 15px;
+    right: 10px;
     row-gap: 15px;
+    justify-self: flex-end;
   }
   .rates-container .rates-box {
     flex-direction: row;
     align-items: center;
     height: 50px;
+    width: 100%;
   }
   .rates-container .rates-box .review {
-    font-size: 0.75rem;
-    padding-right: 45px !important;
+    font-size: 0.85rem;
+    padding-left: 20px !important;
+  }
+  .rates-container .rates-box .stars {
+    padding-left: 30px !important;
   }
   .rates-container .reviews-rate {
     position: relative;
-    right: 80px;
+    right: 90px;
   }
   .rates-container .reportGuru-rate {
     position: relative;
-    right: 40px;
+    right: 45px;
   }
   .buyers-reviews {
     grid-column: 1/3;
     flex-direction: row;
-    column-gap: 25px;
+    column-gap: 30px;
   }
   .buyers-reviews .buyers-container {
-    height: 200px;
-    padding: 20px 15px !important;
+    padding: 35px 25px !important;
   }
   .buyers-reviews .buyers-container .review-text {
     font-size: 0.75rem;
@@ -187,10 +199,13 @@ footer {
     padding-top: 5px !important;
   }
   .buyers-reviews .colton-container {
-    margin-top: -20px;
+    margin-top: -30px;
+  }
+  .buyers-reviews .colton-container .colton-review-text {
+    padding-right: 22px !important;
   }
   .buyers-reviews .irene-container {
-    margin-top: -10px;
+    margin-top: -15px;
   }
 }
 /*# sourceMappingURL=main.css.map */
