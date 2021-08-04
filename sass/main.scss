@@ -3,6 +3,11 @@
 //MOBILE VERSION
 body {
   position: relative;
+  background: url(../images/bg-pattern-top-mobile.svg),
+    url(../images/bg-pattern-bottom-mobile.svg);
+  background-position: right 50vw bottom 70vh, left 50vw top 70vh;
+  background-repeat: no-repeat;
+  background-color: aqua;
 }
 
 .main-container {
@@ -110,10 +115,22 @@ footer {
 
 // TABLET VERSION
 @media screen and (min-width: 750px) {
+  body {
+    background: url(../images/bg-pattern-top-desktop.svg),
+      url(../images/bg-pattern-bottom-desktop.svg);
+    background-position: right 50vw bottom 70vh, left 50vw top 70vh;
+    background-repeat: no-repeat;
+  }
 
   // HEADING
   .heading-description {
     max-width: 750px;
+  }
+
+  // RATES REVIEWS
+  .rates-box {
+    justify-content: center;
+    row-gap: 5px;
   }
 
   // BUYERS REVIEWS
@@ -132,6 +149,10 @@ footer {
 
   body {
     height: 105vh;
+    background: url(../images/bg-pattern-top-desktop.svg),
+      url(../images/bg-pattern-bottom-desktop.svg) no-repeat;
+    background-position: right 58vw bottom 50vh, left 30vw top 100vh;
+    background-repeat: no-repeat;
   }
 
   .main-container {
