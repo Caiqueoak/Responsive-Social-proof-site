@@ -7,7 +7,6 @@ body {
     url(../images/bg-pattern-bottom-mobile.svg);
   background-position: right 50vw bottom 70vh, left 50vw top 70vh;
   background-repeat: no-repeat;
-  background-color: aqua;
 }
 
 .main-container {
@@ -101,10 +100,11 @@ body {
 
 // FOOTER
 footer {
-  position: absolute;
+  position: relative;
   text-align: center;
   font-weight: 700;
-  bottom: 5px;
+  bottom: -15px;
+  padding-bottom: 10px !important;
   width: 100%;
   font-size: 0.7rem;
 
@@ -148,22 +148,21 @@ footer {
   }
 
   body {
-    height: 105vh;
+    height: 100vh;
     background: url(../images/bg-pattern-top-desktop.svg),
       url(../images/bg-pattern-bottom-desktop.svg) no-repeat;
     background-position: right 58vw bottom 50vh, left 30vw top 100vh;
-    background-repeat: no-repeat;
   }
 
   .main-container {
     text-align: left;
     display: grid;
     align-items: flex-start;
-    grid-template-columns: 1fr 1.3fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    padding: 110px 180px !important;
+    row-gap: 100px;
     height: 100vh;
-    padding: 90px 180px 0px !important;
-    row-gap: 80px;
   }
 
   // HEADING
@@ -188,23 +187,24 @@ footer {
   .rates-container {
     position: relative;
     margin-top: 15px;
-    right: 10px;
+    right: 35px;
     row-gap: 15px;
     justify-self: flex-end;
 
     .rates-box {
       flex-direction: row;
       align-items: center;
+      justify-content: flex-start;
       height: 50px;
-      width: 100%;
+      width: 415px;
 
       .review {
         font-size: 0.85rem;
-        padding-left: 20px !important;
+        padding-left: 0px !important;
       }
 
       .stars {
-        padding-left: 30px !important;
+        padding: 0px 30px !important;
       }
     }
     .reviews-rate {
